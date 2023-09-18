@@ -7,34 +7,39 @@
 }
 
 body {
-    background-color: aqua;
+    background-color: #313939;
     font-family: 'Courier New', monospace, serif;
     margin: 0;
+    font-size: 14px;
+
 }
 
 header {
     padding: 20px;
     background-color: #82aad4;
     color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
 
-h1{
+h1 {
     display: inline-block;
-    font-size: 48px;
+    font-size: 300%;
     text-shadow: var(--text-shadow);
 }
 
 nav {
     padding-top: 15px;
     margin-right: 20px;
-    float: right;
     font-size: 20px;
     list-style-type: none;
 }
 
 ul {
     list-style-type: none;
-    display: inline-block;
     margin-left: 25px;
 }
 
@@ -43,13 +48,13 @@ li {
     margin-left: 25px;
 }
 
-a {
+nav a {
     color: #ffffff;
     text-decoration: none;
     text-shadow: var(--text-shadow);
 }
 
-a:hover {
+nav a:hover {
     box-shadow: 1px 1px 2px black, 0 0 25px #08afd5, 0 0 5px #4a4a87;
     font-size: 120%;
 }
@@ -64,7 +69,7 @@ a:hover {
 
 
 .hero {
-    height: 200px;
+    height: 150px;
     width: 100%;
     background-image: url("./img/mahdi-bafande-DOhF7USunSM-unsplash.jpg");
     background-size: cover;
@@ -85,46 +90,131 @@ section {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-between;
 }
 
 h2 {
-    flex-basis: 20%;
-    padding: 85px;
+    font-size: 175%;
+    padding: 70px 0px 80px 80px;
+    flex: 1;
 }
 
 p {
-    padding: 75px;
-    flex-basis: 80%;
-    text-align: center;
-}
-
-figure{
-    flex-basis: 80%;
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: row; */
     align-items: center;
     flex-wrap: wrap;
+    flex: 3;
+    padding: 75px 0px 75px 75px;
+    border-left: 3px solid black;
+}
+
+
+figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 3;
     padding-left: 75px;
+    border-left: 3px solid black;
+}
+
+img {
+    max-height: 200px;
+}
+
+
+
+.card,
+.card-1 {
+    display: inline-block;
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.card {
+    flex-basis: 40%;
 }
 
 .card-1 {
     flex-basis: 80%;
 }
 
-img {
-    max-height: 200px;
-    min-width: 100px;
-    min-height: 100px;
-    display: inline-block;
-    flex-basis: 40%;
-    box-shadow: var(--box-shadow); 
-    border-radius: 20px;
+.info {
+    font-size: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 3;
+    padding: 100px 0px 100px 75px;
+    border-left: 3px solid black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.info ul {
+    margin: 0px;
 }
 
 h3 {
-    flex-basis: 20%;
+    padding: 0px 50px;
+    font-size: 120%;
+    display: inline-block;
 }
 
 h4 {
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+
+    nav,
+    header,
+    section,
+    figure,
+    .info {
+        flex-direction: column;
+    }
+
+    p,
+    figure,
+    .info {
+        border-left: 3px hidden black;
+        border-bottom: 3px solid black;
+
+    
+    }
+
+    figure,
+    .info {
+        padding: 0px 185px 75px 185px;
+    }
+
+    h2 {
+        padding: 50px 0px;
+    
+    }
+    
+    img{
+        max-height: 265px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    nav,
+    figure,
+    section {
+        flex-direction: column;
+    }
+
+    li, .info {
+        padding: 5px 100px;
+    }
 }
