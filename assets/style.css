@@ -1,13 +1,21 @@
 :root {
-    --text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-    --box-shadow: 1px 1px 2px black, 0 0 25px #08afd5, 0 0 5px #4a4a87;
-    box-sizing: border-box;
+    /* --text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
+    /* --box-shadow: 1px 1px 2px black, 0 0 25px #08afd5, 0 0 5px #4a4a87; */
+    /* box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0; */
+    --light-blue: #04B2D9;
+    --light: #C4E5F2;
+    --dark-blue: #262473;
+    --dark: #022626;
+    --blue: #372A8C;
+    --box-shadow: inset 0px 0px 8px var(--light-blue), 0 0 15px var(--light-blue);
+    --text-shadow:  0 0 10px var(--light), 0 0 20px var(--light);
+    --hover-shadow: 0px 0px 10px #fff, 0 0 25px var(--light-blue), 0 0 35px var(--light-blue);
 }
 
 body {
-    background-color: #313939;
+    background-color: black;
     font-family: 'Courier New', monospace, serif;
     margin: 0;
     font-size: 14px;
@@ -16,8 +24,8 @@ body {
 
 header {
     padding: 20px;
-    background-color: #82aad4;
-    color: #ffffff;
+    background-color: var(--dark);
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -55,7 +63,7 @@ nav a {
 }
 
 nav a:hover {
-    box-shadow: 1px 1px 2px black, 0 0 25px #08afd5, 0 0 5px #4a4a87;
+    text-shadow: var(--hover-shadow);
     font-size: 120%;
 }
 
@@ -80,11 +88,12 @@ nav a:hover {
 main {
     width: 100%;
     display: inline-block;
-    background-color: #82aad4;
+    background-color: var(--dark);
     border-radius: 50px;
     color: #ffffff;
-    text-shadow: var(--text-shadow)
-}
+    text-shadow: var(--text-shadow);
+    box-shadow: var(--box-shadow);
+} 
 
 section {
     display: flex;
@@ -190,15 +199,15 @@ img {
     margin: 0px;
 }
 
-h3 {
+/* h3 {
     padding: 0px 50px;
     font-size: 120%;
     display: inline-block;
-}
+} */
 
-h4 {
+/* h4 {
     text-align: center;
-}
+} */
 
 @media screen and (max-width: 768px) {
 
@@ -213,6 +222,7 @@ h4 {
     }
 
     p,
+    figure,
     .info {
         border-left: 3px hidden black;
         border-bottom: 3px solid black;
@@ -234,7 +244,8 @@ h4 {
     }
 
     figure {
-        padding: 0px
+        padding: 0px;
+        padding-bottom: 20px;
     }
 
 }
