@@ -118,12 +118,30 @@ figure {
     flex: 3;
     padding-left: 75px;
     border-left: 3px solid black;
+    width: 100%;
 }
 
 img {
     max-height: 200px;
 }
+ 
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
 
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
 
 
 .card,
@@ -136,10 +154,24 @@ img {
 
 .card {
     flex-basis: 40%;
+    position: relative;
+    text-align: center;
+    color: white;
+
 }
 
 .card-1 {
     flex-basis: 80%;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .info {
@@ -181,7 +213,6 @@ h4 {
     }
 
     p,
-    figure,
     .info {
         border-left: 3px hidden black;
         border-bottom: 3px solid black;
@@ -189,7 +220,6 @@ h4 {
     
     }
 
-    figure,
     .info {
         padding: 0px 185px 75px 185px;
     }
@@ -203,18 +233,26 @@ h4 {
         max-height: 265px;
     }
 
+    figure {
+        padding: 0px
+    }
+
 }
 
 @media screen and (max-width: 420px) {
 
     /* Use flex-direction to stack the navbar, sidebar, and body */
     nav,
-    figure,
+    
     section {
         flex-direction: column;
     }
 
     li, .info {
         padding: 5px 100px;
+    }
+
+    p {
+        padding: 0px 30px 50px 30px
     }
 }
