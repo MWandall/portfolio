@@ -1,4 +1,4 @@
-# portfolio
+
 
 # Mitchell Wandall Portfolio
 
@@ -27,13 +27,15 @@
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+<!-- Provide instructions and examples for use. Include screenshots as needed. -->
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+<!-- To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax: -->
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+https://mwandall.github.io/portfolio/
+
+
+ ![Portfolio Screenshot](./assets/img/mwandall.github.io_portfolio_.png)
+
 
 ## Credits
 - Image Creddits: Vitalii, Mazur, Viviana, Rishe
