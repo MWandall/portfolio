@@ -1,16 +1,11 @@
 :root {
-    /* --text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
-    /* --box-shadow: 1px 1px 2px black, 0 0 25px #08afd5, 0 0 5px #4a4a87; */
-    /* box-sizing: border-box;
-    padding: 0;
-    margin: 0; */
     --light-blue: #04B2D9;
     --light: #C4E5F2;
     --dark-blue: #262473;
     --dark: #022626;
     --blue: #372A8C;
     --box-shadow: inset 0px 0px 8px var(--light-blue), 0 0 15px var(--light-blue);
-    --text-shadow:  0 0 10px var(--light-blue), 0 0 20px var(--light-blue);
+    --text-shadow: 0 0 10px var(--light-blue), 0 0 20px var(--light-blue);
     --hover-shadow: 0px 0px 10px #fff, 0 0 25px var(--light), 0 0 35px var(--light);
 }
 
@@ -20,7 +15,6 @@ body {
     margin: 0 auto;
     font-size: 14px;
     width: 100%
-
 }
 
 header {
@@ -45,7 +39,7 @@ nav {
     margin-right: 20px;
     font-size: 20px;
     list-style-type: none;
-    
+
 }
 
 ul {
@@ -56,18 +50,22 @@ ul {
 li {
     display: inline-block;
     margin-left: 25px;
-    
+
 }
 
 
-nav a, section a {
+nav a,
+section a {
     color: #ffffff;
     text-decoration: none;
     text-shadow: var(--text-shadow);
-    
+
 }
 
-nav a:hover, section a:hover, .bottom-left:hover, .bottom-right:hover {
+nav a:hover,
+section a:hover,
+.bottom-left:hover,
+.bottom-right:hover {
     text-shadow: var(--hover-shadow);
     font-size: 120%;
 }
@@ -88,13 +86,12 @@ nav a:hover, section a:hover, .bottom-left:hover, .bottom-right:hover {
     background-size: cover;
     background-position: center;
     border-radius: 0px 0px 50px 50px;
-    /* opacity: 20%; */
     position: relative;
     display: flex;
     align-items: stretch;
     flex-direction: row;
     justify-content: flex-end;
-   
+
 }
 
 .hero .bottom-right {
@@ -116,7 +113,7 @@ main {
     color: #ffffff;
     text-shadow: var(--text-shadow);
     box-shadow: var(--box-shadow);
-} 
+}
 
 section {
     display: flex;
@@ -132,8 +129,7 @@ h2 {
 }
 
 p {
-    /* display: flex; */
-    /* flex-direction: row; */
+
     align-items: center;
     flex-wrap: wrap;
     flex: 3;
@@ -156,14 +152,14 @@ figure {
 img {
     max-height: 200px;
 }
- 
+
 .container {
     position: relative;
     text-align: center;
     color: white;
-  }
+}
 
-  .centered {
+.centered {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -173,34 +169,28 @@ img {
     background-color: var(--dark-blue);
     border-radius: 50px;
     opacity: 80%;
-  }
+}
 
-  .bottom-left {
+.bottom-left {
     position: absolute;
     bottom: 15px;
     left: 25px;
     background-color: var(--dark-blue);
     border-radius: 50px;
     padding: 5px;
-    /* flex-basis: 50%; */
-  }
 
-  .bottom-right {
+}
+
+.bottom-right {
     position: absolute;
     bottom: 15px;
     right: 25px;
     background-color: var(--dark-blue);
     border-radius: 50px;
     padding: 5px;
-    /* flex-basis: 50%; */
-  }
 
-  /* .area:hover { */
-    /* border: 3px dotted var(--light); */
-    /* background-color: #dc1be2; */
-    /* box-shadow: var(--hover-shadow); */
-    /* transform: translate3D(0,-1px,0) scale(1.03); */
-  /* } */
+}
+
 
 
 .card,
@@ -227,13 +217,16 @@ img {
     color: white;
 }
 
-.card-img, .card-img-left, .card-img-right {
+.card-img,
+.card-img-left,
+.card-img-right {
     width: 100%;
     height: 150px;
     object-fit: cover;
 
 }
-.card-img{
+
+.card-img {
     border-radius: 20px;
 }
 
@@ -245,13 +238,18 @@ img {
 .card-img-right {
     border-radius: 0px 20px 20px 0px;
 }
-.card-1 a, .card a {
+
+.card-1 a,
+.card a {
     width: 100%;
 }
 
-.card:hover, .card-1:hover, .card-img-right:hover, .card-img-left:hover{
+.card:hover,
+.card-1:hover,
+.card-img-right:hover,
+.card-img-left:hover {
     box-shadow: var(--hover-shadow);
-    transform: translate3D(0,-1px,0) scale(1.03);
+    transform: translate3D(0, -1px, 0) scale(1.03);
 }
 
 .info {
@@ -271,15 +269,7 @@ img {
     text-align: center;
 }
 
-/* h3 {
-    padding: 0px 50px;
-    font-size: 120%;
-    display: inline-block;
-} */
 
-/* h4 {
-    text-align: center;
-} */
 
 @media screen and (max-width: 768px) {
 
@@ -299,7 +289,7 @@ img {
         border-left: 3px hidden black;
         border-bottom: 3px solid black;
 
-    
+
     }
 
     .info {
@@ -308,10 +298,10 @@ img {
 
     h2 {
         padding: 50px 0px;
-    
+
     }
-    
-    img{
+
+    img {
         /* max-height: 265px; */
     }
 
@@ -330,12 +320,13 @@ img {
 
     /* Use flex-direction to stack the navbar, sidebar, and body */
     nav,
-    
+
     section {
         flex-direction: column;
     }
 
-    li, .info {
+    li,
+    .info {
         display: block;
     }
 
